@@ -33,5 +33,10 @@ public class Handler extends DefaultHandler {
    public void endElement(String namespace, String LocalName, String qName) throws SAXException {
        
    }
-   
+   @Override
+   // данный метод будет читать информацию, находящуюся между тегами элемента
+   // это будет массив символов cd, начиная от start и до end.
+   public void characters(char[] ch, int starts, int end) {
+       
+   }
 }
