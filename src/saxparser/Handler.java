@@ -26,7 +26,9 @@ public class Handler extends DefaultHandler {
    // при нахождении каждого элемента
    // attr - это атрибут присвоенный XML элементу. Например id="1"
    public void startElement(String namespace, String LocalName, String qName, Attributes attr) {
-       
+       switch (qName) {
+             
+       }
    }
    @Override
    // срабатывает при завершении чтения каждого элемента. Не принимает атрибута в параметре
@@ -36,7 +38,9 @@ public class Handler extends DefaultHandler {
    @Override
    // данный метод будет читать информацию, находящуюся между тегами элемента
    // это будет массив символов cd, начиная от start и до end.
-   public void characters(char[] ch, int starts, int end) {
+   public void characters(char[] ch, int start, int end) {
+       String Data = new String(ch, start, end);     // в этой строке будет формироваться из символов xml файла строка с данными
+       System.out.println(Data); // Вывод данных, между тегами элемента xml
        
    }
 }
