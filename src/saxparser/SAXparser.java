@@ -30,7 +30,7 @@ public class SAXparser {
         try {
             
             SAXParser parser = parserFactory.newSAXParser();
-            parser.parse(new File("config.xml"), hd);
+            parser.parse(new File("src/saxparser/config.xml"), hd);
         } catch (ParserConfigurationException ex) {
             Logger.getLogger(SAXparser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SAXException ex) {

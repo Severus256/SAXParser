@@ -26,9 +26,8 @@ public class Handler extends DefaultHandler {
    // при нахождении каждого элемента
    // attr - это атрибут присвоенный XML элементу. Например id="1"
    public void startElement(String namespace, String LocalName, String qName, Attributes attr) {
-       switch (qName) {
-             
-       }
+       System.out.println(qName);
+       
    }
    @Override
    // срабатывает при завершении чтения каждого элемента. Не принимает атрибута в параметре
