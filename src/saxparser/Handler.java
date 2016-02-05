@@ -5,6 +5,8 @@
  */
 package saxparser;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -14,6 +16,11 @@ import org.xml.sax.helpers.DefaultHandler;
  * @author Aga
  */
 public class Handler extends DefaultHandler {
+    
+    private String id;           // для значений id
+    private String title;          // для значений title
+    private Map<String, String> data = new HashMap<String, String>();
+    
    @Override
    public void startDocument() throws SAXException { //срабатывает при начале документа
        System.out.println("Start parsing...");
