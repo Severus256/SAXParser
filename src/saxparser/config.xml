@@ -8,12 +8,12 @@
             <price>300 рублей</price>
             <amount type="шт">1</amount>
         </product>
-         <product id="Стеклоочиститель">
+        <product id="Стеклоочиститель">
             <title>Люкс</title>
             <price>350 рублей</price>
             <amount type="шт">1</amount>
         </product>
-         <product id="Мыло">
+        <product id="Мыло">
             <title>Лесной бальзам</title>
             <price>120 рублей</price>
             <amount type="шт">1</amount>

@@ -24,11 +24,12 @@ public class SAXparser {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         Handler hd = new Handler();
+
         SAXParserFactory parserFactory = SAXParserFactory.newInstance();
         try {
-            
+
             SAXParser parser = parserFactory.newSAXParser();
             parser.parse(new File("src/saxparser/config.xml"), hd);
         } catch (ParserConfigurationException ex) {
@@ -38,7 +39,7 @@ public class SAXparser {
         } catch (IOException ex) {
             Logger.getLogger(SAXparser.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+
     }
-    
+
 }
