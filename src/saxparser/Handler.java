@@ -20,15 +20,7 @@ public class Handler extends DefaultHandler {
     private String id;           // для значений id
     private String element;          // для значений элементов XML
     private Map<String, String> data = new HashMap<String, String>(); // для данных целиком
-    
-    private String[] elementsNames;
-    private String[] elementsTransform;
-    
-    
-    
-    
-    
-    
+
     @Override
     public void startDocument() throws SAXException { //срабатывает при начале документа
         System.out.println("Start parsing...");
@@ -40,11 +32,21 @@ public class Handler extends DefaultHandler {
     }
 
     @Override
-   // при нахождении каждого элемента
+    // при нахождении каждого элемента
     // attr - это атрибут присвоенный XML элементу. Например id="1"
     public void startElement(String namespace, String LocalName, String qName, Attributes attr) {
-        
-      this.element = qName; // имя тега, клоторый парсится
+
+        this.element = qName; // имя тега, который парсится
+        switch(element) {
+            case "product": 
+                this.id = attr.getValue(0);
+                break;
+            case "title":
+                this.id = attr.getValue(0);
+                break;
+                
+        }
+
     }
 
     @Override
@@ -55,7 +57,7 @@ public class Handler extends DefaultHandler {
     }
 
     @Override
-   // данный метод будет читать информацию, находящуюся между тегами элемента
+    // данный метод будет читать информацию, находящуюся между тегами элемента
     // это будет массив символов cd, начиная от start и до end.
     public void characters(char[] ch, int start, int end) {
         String Data = new String(ch, start, end);     // в этой строке будет формироваться из символов xml файла строка с данными
